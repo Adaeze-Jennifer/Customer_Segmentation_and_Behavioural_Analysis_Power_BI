@@ -8,7 +8,7 @@ The dataset contains 500 customer records spanning demographics, income, region,
 - Average Tenure
 - Average Income
   
-A Power BI dashboard was developed with seven interactive visualisations across two report pages. Slicers were added for Region, Gender, Customer Segment, and Age Group to enable dynamic filtering and comparative analysis.
+A Power BI dashboard was developed with seven interactive visualisations across the report page. Slicers were added for Region, Gender, Customer Segment, and Age Group to enable dynamic filtering and comparative analysis.
 
 ## 📌Objectives
 - Analyse customer data and uncover patterns in demographics, income, tenure, and professional profiles
