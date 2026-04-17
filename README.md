@@ -52,7 +52,7 @@ A Power BI dashboard was developed with seven interactive visualisations across 
 The average customer is 46.28 years old, with an average tenure of 4.96 years and an average income of $114,400. This defines a middle-aged, financially stable, and moderately long-tenured customer base, indicating a mature and established portfolio.
 
 ### 2. Gender Distribution:
-The customer base is nearly balanced, with **51.2% **Male and **48.8%** Female, showing no significant gender bias and broad demographic coverage.
+The customer base is nearly balanced, with **51.2%** Male and **48.8%** Female, showing no significant gender bias and broad demographic coverage.
 
 ### 3. Customer Segment Distribution:
 The Retail segment dominates **(57.2%),** followed by Corporate **(33.8%),** while Private customers represent only **9%.** This low Private share is consistent across all regions, suggesting a structural segmentation or positioning gap rather than a regional issue.
