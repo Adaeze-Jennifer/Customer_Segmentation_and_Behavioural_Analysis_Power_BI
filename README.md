@@ -1,91 +1,129 @@
 # 📊 Customer Segmentation and Behavioural Analysis Report (Power BI)
-This report presents findings from a customer segmentation and behavioural analysis conducted in Microsoft Power BI. The dataset contains 500 customer records spanning demographics, income, region, occupation, tenure, and segment classification. Data was cleaned and transformed in Power Query, three calculated columns were created (Year, Tenure, Age Group), and four DAX measures were built to power the KPI cards. Seven interactive visualisations were produced across two report pages, with slicers enabling filtering by Customer Segment, Region, and Age Group.
+## Introduction
+This project presents a customer segmentation and behavioural analysis conducted to better understand customer profiles and support data-driven marketing decisions. Using a dataset of 500 customers collected in 2025, the analysis explores demographics, regional distribution, tenure, income levels, and professional characteristics to generate actionable insights for retention and targeting strategies.
 
 ## 🔍Overview
-This project focuses on performing Exploratory Data Analysis (EDA) on Amazon sales data using Python. The analysis identifies key patterns in sales performance, revenue distribution, and customer behaviour, with insights communicated through clear and effective data visualisations.
+The dataset contains 500 customer records spanning demographics, income, region, occupation, tenure, and segment classification. Data preparation was carried out in Power Query and included cleaning, transformation, and feature engineering. Three calculated columns (Year, Tenure, and Age Group) were created to support deeper analysis, alongside four DAX measures used for KPIs:
+- Total Customers
+- Average Age
+- Average Tenure
+- Average Income
+A Power BI dashboard was developed with seven interactive visualisations across two report pages. Slicers were added for Region, Gender, Customer Segment, and Age Group to enable dynamic filtering and comparative analysis.
 
 ## 📌Objectives
-- Analyse sales performance across regions, categories, and time periods
-- Identify key revenue drivers and high-performing product segments.
-- Uncover trends and patterns in customer purchasing behaviour.
-- Provide data-driven insights to support business decision-making.
+- Analyse customer data and uncover patterns in demographics, income, tenure, and professional profiles
+- Segment customers into meaningful groups for targeted marketing and retention strategies
+- Evaluate customer growth trends over time using join date analysis
+- Assess regional distribution and identify high-value customer locations
+- Examine income and age patterns across different customer segments
+- Build an interactive Power BI dashboard for dynamic exploration of customer data
 
 ## ❓Business Questions
-- What is the overall sales performance in terms of total revenue and quantity sold?
-- How do sales trends evolve over time (monthly and yearly patterns)?
-- Which product categories generate the highest revenue?
-- What patterns can be observed in customer purchasing behaviour(order quantities, frequency)?
-- What relationships exist between sales and quantity?
+- How has customer growth evolved over time?
+- Which region has the highest number of customers?
+- What are the dominant customer segments within the dataset?
+- How are customers distributed across gender and age groups?
+- Which age group has the highest average age profile?
+- What is the average income and tenure of customers?
+- What professional groups make up the largest portion of the customer base?
+- Are there noticeable patterns between customer segment, income, and occupation?
 
 ## 📚Dataset Description
-- **Source:** Amazon sales dataset containing order-level 50,000 transaction data.
-- **Columns:** order_id, order_date, product_id, product_category, price, disounted_price, discount_percent, quantity_sold, customer_region, total_revenue, payment_method, rating and review_count.
+- **Source:** Customer Segmentation Dataset (2015–2025, 500 records)
+- **Columns:** CustomerID, Name, Gender, Age, Region, Occupation, Income, Customer_Segment, Join_Date, Tenure, Age Group, 
 
 ## 🛠Tools & Technologies Used
-- Python (Pandas, Numpy, Matplotlib, Seaborn)
-- Jupyter Notebook
-- Microsoft Excel for data cleaning and data validation.
-  
-## 🧹Data Cleaning Steps
-- Handled missing and incorrect values before importing into pandas.
-- Converted date columns to appropriate datetime formats for analysis
-- Ensured correct data types across all 13 columns.
+- Microsoft Power BI (Power Query, DAX, Data Visualization)
+- Microsoft Excel (Initial data inspection and validation)
+
+## 🧹Data Cleaning (Power Query)
+- Removed duplicate records
+- Handled missing or inconsistent values
+- Corrected data types (e.g., dates, numeric fields)
+- Renamed and reordered columns for consistency
+
+## 🔧 Data Transformation (Power Query)
+- Year – Extracted from Join_Date
+- Tenure – Calculated as number of years as a customer
+- Age Group – Categorised into Youth, Young Adult, Adult, and Senior
 
 ## 📈Key Trends Discovered
-### 1. Overall Performance: 
-The business generated a total revenue of $32,866,573.74 across 149,970 units sold,
-establishing a strong top-line performance baseline across the analysis period.
- 
-### 2. Sales Trend Over Time: 
-Monthly revenue fluctuated between $1.27M and $1.45M with no consistent upward or 
-downward trajectory. A significant peak occurred in January 2023, followed by the sharpest dip 
-in February 2023. Sales recovered through mid-2023, then declined again toward year-end. The 
-irregular pattern suggests revenue is driven by seasonal demand or promotional activity rather 
-than steady organic growth.
+### 1. Customer Profile (Age, Income, Tenure):
+The average customer is 46.28 years old, with an average tenure of 4.96 years and an average income of $114,400. This defines a middle-aged, financially stable, and moderately long-tenured customer base, indicating a mature and established portfolio.
 
-### 3. Category Performance:
-All six product categories performed within a narrow revenue band. Beauty led with $5,550,625, 
-followed by Books ($5,484,863), Fashion ($5,480,123), Home & Kitchen ($5,473,133), 
-Electronics ($5,470,594), and Sports at the bottom with $5,407,236. The gap between the highest 
-and lowest categories is only $143,000 indicating a well-diversified, balanced product 
-portfolio with no single dominant category.
+### 2. Gender Distribution:
+The customer base is nearly balanced, with **51.2% **Male and **48.8%** Female, showing no significant gender bias and broad demographic coverage.
 
-### 4. Regional Performance:
-The Middle East is the top-performing region with approximately $8.30M in revenue, followed 
-by North America ($8.28M), Asia ($8.18M), and Europe (~$8.11M). The revenue gap across all 
-four regions is approximately $189,500 reflecting a globally balanced customer base with no 
-single region dominating sales.
+### 3. Customer Segment Distribution:
+The Retail segment dominates **(57.2%),** followed by Corporate **(33.8%),** while Private customers represent only **9%.** This low Private share is consistent across all regions, suggesting a structural segmentation or positioning gap rather than a regional issue.
 
-### 5. Customer Purchasing Behaviour: 
-Order quantities are distributed almost perfectly even across all five levels — 1 qty (20.1%, 
-10,060 orders), 2 qtys (19.8%, 9,914 orders), 3 qtys (20.1%, 10,026 orders), 4 qtys (20.0%, 9,996 
-orders), and 5 qtys (20.0%, 10,004 orders). Customers show no tendency toward bulk or single
-unit purchasing, suggesting that quantity decisions are driven by individual product need or 
-pricing rather than a consistent buying habit.
+### 4. Customer Growth Trend:
+Customer acquisition peaked around 2019–2020, followed by a consistent five-year decline through 2025, indicating a sustained acquisition challenge rather than a temporary fluctuation.
 
-### 6. Relationship Analysis:
-The correlation between total revenue and quantity sold is 0.59.  A moderate positive 
-relationship. While higher quantities sold generally correspond with higher revenue, the 
-moderate score confirms that price per unit and discount levels also significantly influence 
-revenue outcomes.
+### 5. Regional Performance:
+The South region leads in customer count, followed by East and North, while the West region consistently underperforms. However, segment distribution remains uniform across regions, confirming that the gap is driven by volume (acquisition) rather than customer type or fit.
 
-## 💡Insights & Recommendations
-- Diversification is a strength but also a risk. The near-equal performance across all categories 
-and regions means no single segment can be relied upon as a growth engine. The business needs 
-a deliberate strategy to identify and accelerate its highest-potential segment. 
+### 6. Age Distribution:
+Adults and Young Adults dominate the customer base, reinforcing that the business primarily serves mid-career professionals.
 
-- Seasonal volatility requires attention. The sharp dips in February 2022 and February 2023 
-suggest a recurring post-peak slowdown. Targeted promotions or inventory adjustments during 
-low periods could smooth revenue fluctuations. 
+### 7. Occupational Behaviour vs Income:
+Engineers represent the largest customer group by volume, while Traders record the highest average income. This indicates that income is not the primary driver of engagement, and suggests a stronger alignment between product usage and the professional context of Engineers rather than purchasing power alone.
 
-- Pricing strategy matters more than volume. Since quantity sold only moderately predicts 
-revenue (0.59), optimising price points and discount strategies will have a greater impact on 
-revenue growth than simply pushing for more units sold. 
+## 📈 Trends and Behavioural Patterns
+Customer acquisition **increased** steadily through the **mid-to-late 2010s,** **peaking** around **2019–2020,** before entering a **continuous five-year decline.** A single-year dip can reflect external disruption. However, a five-year downward trend indicates a structural acquisition challenge that requires deliberate intervention. While retention remains stable (supported by an average tenure of 4.96 years), weakening acquisition signals a structural issue in customer growth. 
 
-- Europe and Asia are growth opportunities. Both regions trail the Middle East and North 
-America by a narrow margin. Targeted regional campaigns could close this gap and meaningfully 
-lift overall revenue.
+Regional analysis confirms a **consistent hierarchy:** Regionally, South records the highest customer count, followed by East and North, with West trailing all three. Importantly, the segment distribution is **uniform** across regions, the variation is driven by acquisition efficiency rather than market fit.
+
+Occupational analysis highlights a **behavioural divergence** between **income and engagement.** **Engineers** dominate **customer volume,** while **Traders,** despite having the **highest income levels,** account for fewer customers. This indicates that purchasing behaviour is more strongly influenced by occupational relevance than income alone.
+
+## 📊 Dashboard Development (Project Requirements)
+The following visualisations were developed in accordance with the project brief:
+- Customer Growth Timeline
+- Region with the Highest Customers
+- Age Group with the Highest Average Age
+- Professional Profile of Customers
+- Customer Distribution Across Gender
+- Customer Segment Distribution
+Interactive slicers were implemented for Region, Gender, Customer Segment, and Age Group to enable dynamic filtering and deeper exploration of patterns across customer dimensions.
+
+## ⭐ Exploratory Analysis (Beyond Project Requirements)
+In addition to the required visualisations, an exploratory analysis of income distribution was conducted to further understand the financial profile of customers across occupational groups.
+
+This extension was introduced independently to enhance behavioural interpretation of the dataset. The analysis revealed that income levels vary significantly across occupations, with Traders recording the highest average income despite lower customer volume compared to Engineers.
+
+This finding reinforces the insight that customer engagement is not solely driven by income level, but is more closely associated with occupational context and product relevance.
+
+## 💡Recommendations
+- **Reassess Private Segment Strategy**
+The Private segment remains consistently low at 9% across all regions, indicating a structural gap in positioning or product-market fit. A strategic review is required to determine whether this segment should be actively expanded or deprioritised.
+
+- **Strengthen Retention of Engineer Segment**
+Engineers represent the highest customer volume, indicating strong alignment between their professional context and the product offering. A targeted retention strategy should be implemented, including loyalty programs and behaviour-based engagement strategies.
+
+- **Investigate Income–Engagement Misalignment in Traders**
+Despite having the highest income levels, Traders account for fewer customers than Engineers. This suggests that engagement is driven more by occupational relevance than income, requiring further investigation into product fit and acquisition channels.
+
+- **Address Declining Customer Acquisition**
+Customer acquisition has declined steadily over five years despite stable retention. A structured diagnostic is required to identify breakdown points across region, occupation, and segment.
+
+- **Improve Performance in West Region**
+The West region consistently underperforms in customer volume despite having a similar segment distribution to other regions. This indicates an acquisition gap rather than a market mismatch.
+
+- **Explore Premium Offering Opportunities**
+With an average income of $114,400, there is clear potential for premium product offerings, particularly within underrepresented segments such as Private customers.
+
+## Conclusion
+This analysis provides a comprehensive understanding of customer structure, behaviour, and segmentation across 500 customers. The findings highlight a mature customer base, strong dependence on Retail and Corporate segments, and meaningful behavioural differences across occupations.
+
+Key strategic concerns include declining customer acquisition, underperformance of the Private segment, and the divergence between income levels and engagement across occupations. Addressing these areas presents clear opportunities to improve targeting, retention, and long-term customer value.
 
 ## 📒Project Notebook 
+
+View Power BI Project File (.pbix)
+ – Contains the full Power BI report including data model, DAX measures, and interactive visualisations. (Download and open in Power BI Desktop)
+– Snapshot of the final interactive dashboard.
+View Full Repository
+ – Full documentation, insights, and project breakdown.
+Back to Top
 - [View Full Analysis ](https://github.com/Adaeze-Jennifer/Amazon-Sales-Performance-Analysis/blob/main/AMAZON%20SALES%20PERFORMANCE%20-%20PYTHON.ipynb) - This notebook presents a comprehensive analysis of Amazon sales data using Python.
 - [Back to Top](#amazon-sales-performance-analysis-report) - Project Overview and Documentation
