@@ -7,6 +7,7 @@ The dataset contains 500 customer records spanning demographics, income, region,
 - Average Age
 - Average Tenure
 - Average Income
+  
 A Power BI dashboard was developed with seven interactive visualisations across two report pages. Slicers were added for Region, Gender, Customer Segment, and Age Group to enable dynamic filtering and comparative analysis.
 
 ## 📌Objectives
