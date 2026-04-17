@@ -1,4 +1,4 @@
-# 📊 Customer Segmentation and Behavioural Analysis Report (Power BI)
+# 📊 Customer Segmentation and Behavioural Analysis Report | Power BI
 This project presents a customer segmentation and behavioural analysis conducted to better understand customer profiles and support data-driven marketing decisions. Using a dataset of 500 customers collected in 2025, the analysis explores demographics, regional distribution, tenure, income levels, and professional characteristics to generate actionable insights for retention and targeting strategies.
 
 ## 🔍Overview
