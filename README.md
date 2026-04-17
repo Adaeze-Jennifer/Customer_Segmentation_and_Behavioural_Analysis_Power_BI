@@ -117,7 +117,7 @@ This analysis provides a comprehensive understanding of customer structure, beha
 Key strategic concerns include declining customer acquisition, underperformance of the Private segment, and the divergence between income levels and engagement across occupations. Addressing these areas presents clear opportunities to improve targeting, retention, and long-term customer value.
 
 ## 📒Project Notebook 
-- [View Power BI Project File (.pbix)](https://github.com/Adaeze-Jennifer/Customer_Segmentation_and_Behavioural_Analysis_Power_BI/blob/main/project%20files/customer_segmentation.pbix) – Contains the full Power BI report including data model, DAX measures, and interactive visualisations. _(Download and open in Power BI Desktop)._
+- [View Power BI Project File (.pbix)](https://github.com/Adaeze-Jennifer/Customer_Segmentation_and_Behavioural_Analysis_Power_BI/blob/main/project%20files/customer_segmentation.pbix) – Contains the full Power BI report including data model, DAX measures, and interactive visualisations _(Download and open in Power BI Desktop)._
 - [Dashboard Preview](https://github.com/Adaeze-Jennifer/Customer_Segmentation_and_Behavioural_Analysis_Power_BI/blob/main/images/dashboard_screenshot.png) – Snapshot of the final interactive dashboard.
 - [View Full Repository](https://github.com/Adaeze-Jennifer/Customer_Segmentation_and_Behavioural_Analysis_Power_BI/tree/main) – Full documentation, insights, and project breakdown.
 - [Back to Top](#Customer_Segmentation_and_Behavioural_Analysis_Power_BI) - Project Overview and Documentation.
