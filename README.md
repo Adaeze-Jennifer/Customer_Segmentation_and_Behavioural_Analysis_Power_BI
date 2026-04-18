@@ -12,6 +12,7 @@ A Power BI dashboard was developed with seven interactive visualisations across 
 
 ## 📊 Dashboard Preview
 A high-level overview of customer segmentation insights across key dimensions.
+
 ![Dashboard](images/dashboard_screenshot.png)
 
 ## 📌Objectives
