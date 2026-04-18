@@ -11,6 +11,7 @@ The dataset contains 500 customer records spanning demographics, income, region,
 A Power BI dashboard was developed with seven interactive visualisations across the report page. Slicers were added for Region, Gender, Customer Segment, and Age Group to enable dynamic filtering and comparative analysis.
 
 ## 📊 Dashboard Preview
+A high-level overview of customer segmentation insights across key dimensions.
 ![Dashboard](images/dashboard_screenshot.png)
 
 ## 📌Objectives
